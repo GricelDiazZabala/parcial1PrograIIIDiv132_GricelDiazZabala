@@ -22,7 +22,17 @@ let datosAlumno = document.querySelector("#datosAlumno");
 let contenedorFrutas = document.querySelector("#contenedorFrutas");
 let contenedorCarrito = document.querySelector("#contenedorCarrito");
 let barraBusqueda = document.querySelector("#barraBusqueda");
+let nav = document.querySelector("nav");
 
+
+/*
+acá quise probar de "si ya existe un carrito guardado en el localStorage, que se cargue ese"
+if (localStorage.getItem("carrito")){
+    let carrito = localStorage.getItem("carrito");
+}else{
+    let carrito = [];
+}
+*/
 //armo un carrito como un array vacío
 let carrito = [];
 
@@ -79,7 +89,20 @@ function agregarACarrito(id){
     let frutaSeleccionada = frutas.find(f => f.id === id);
     carrito.push(frutaSeleccionada);
     mostrarCarrito();
+    //almaceno los productos del carrito en el localStorage
+    localStorage.setItem("carrito", carrito);
 }
+/*
+function contarProductos(){
+    let contadorProductos = "<p>";
+    carrito.forEach((p) => {
+        p++
+        contadorProductos +=
+        `Carrito: ${p} productos</p>`
+        });
+    nav.innerHTML = contadorProductos;
+}
+    */
 
 /*
 acá se arma el carrito como lista desorganizada (ul de html)
@@ -102,6 +125,7 @@ function mostrarCarrito(){
 
     console.log(carrito);
 }
+
 
 /*
 eliminar elementos de a uno del carrito
@@ -132,7 +156,7 @@ function imprimirDatosAlumno(){
 
 /* una prácica común es hacer una funcion init() que sea la primera que ocurre
 básicamente llama a todas las funciones y cosas que tienen que pasar primero
-(como mostrar los productos) */
+(como mostrar los productos)*/
 function init(){
     imprimirDatosAlumno();
     mostrarProductos(frutas);
