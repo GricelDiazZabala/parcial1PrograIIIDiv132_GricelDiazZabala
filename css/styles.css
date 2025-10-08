@@ -1,63 +1,135 @@
-:root {
-  --verde: #38a54c,
-  --rojo: #f60221
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
 }
 
-main h2{
+nav {
     display: flex;
-}
-
-main{
     align-items: center;
-}
-
-nav{
-    display: flex;
+    padding: 0 20px;
     height: 50px;
-    background-color: var(--verde);
+    background-color: #38a54c;
+    color: white;
 }
 
-.card-producto img{
-    width: 50px;
-    height: 50px;
+nav h2 {
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
-.card-producto{
-    width: 200px;
-    height: 200px;
-    padding: 10px;
-    border: 1px solid;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+#datosAlumno {
+    margin-left: 20px;
 }
 
-#contenedorFrutas{
-    height: 600px;
+#barraBusqueda {
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+    margin-right: 20px;
+}
+
+main {
+    padding: 20px;
+}
+
+main h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+#contenedorFrutas {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #ccc;
 }
 
-#contenedorCarrito{
-    width: 50%;
-    margin: auto;
+.card-producto {
+    width: 150px; 
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 
-#contenedorCarrito li{
+.card-producto img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.card-producto h3 {
+    margin: 5px 0;
+    font-size: 1.1em;
+}
+
+.card-producto p {
+    margin: 0 0 10px 0;
+    font-weight: bold;
+    color: #333;
+}
+
+.botonAgregar {
+    background-color: #38a54c;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 3px;
+    font-weight: bold;
+    width: 100%; 
+}
+
+#contenedorCarrito {
+    width: 60%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#contenedorCarrito h2 {
+    margin: 20px 0;
+}
+
+#contenedorCarrito ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+#contenedorCarrito li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 300px;
+    padding: 5px 0;
+    width: 350px;
 }
 
-#boton-eliminar{
-    background-color: var(--rojo);
+.boton-eliminar {
+    background-color: #f60221;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-weight: bold;
+    margin-left: 10px;
 }
 
-#botonAgregar{
-    background-color: var(--verde);
+#contenedorCarrito button {
+    background-color: #f60221;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    font-weight: bold;
+    margin-top: 20px;
 }

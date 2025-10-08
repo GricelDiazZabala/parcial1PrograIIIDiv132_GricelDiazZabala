@@ -45,7 +45,7 @@ function mostrarProductos(array) {
                 <h3>${fruta.nombre}</h3>
                 <p>$ ${fruta.precio}</p>
                 <!--cada vez que se aprieta el botón, se añade al carrito-->
-                <button class "botonAgregar" onclick="agregarACarrito(${fruta.id})">Agregar a carrito</button>
+                <button class="botonAgregar" onclick="agregarACarrito(${fruta.id})">Agregar a carrito</button>
             </div> `;
   });
   contenedorFrutas.innerHTML = cartaProducto;
